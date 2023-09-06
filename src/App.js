@@ -4,12 +4,12 @@ export default function App() {
   const [ans, setAns] = useState("");
   async function HandleSubmit(event) {
     event.preventDefault();
-    console.log("here");
+    // console.log("here");
     var url = document.getElementById("url-input").value;
 
     if (url != "") {
       var final = "";
-      console.log(typeof url);
+      // console.log(typeof url);
       await fetch("https://gotiny.cc/api", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -21,7 +21,7 @@ export default function App() {
         })
         .then((res) => {
           console.log(res[0].code);
-          final = `gotiny.cc/${res[0].code}`;
+          final = `https://gotiny.cc/${res[0].code}`;
         })
         .catch((error) => console.log(error));
 
@@ -41,7 +41,7 @@ export default function App() {
         <input type="submit"></input>
       </form>
       <p>
-        <a link={ans}>{ans}</a>
+        <a href={ans} target="_blank" rel="noreferrer noopener">{ans}</a>
       </p>
     </div>
   );

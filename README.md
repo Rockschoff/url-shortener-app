@@ -1,2 +1,2 @@
 # url-shortener-app
-Created with CodeSandbox
+Basic UI that helps to shorten urls
