@@ -41,7 +41,7 @@ export default function App() {
         <input type="submit"></input>
       </form>
       <p>
-        <a href={ans}>{ans}</a>
+        <a link={ans}>{ans}</a>
       </p>
     </div>
   );
